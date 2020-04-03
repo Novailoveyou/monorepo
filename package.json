@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Novailoveyou's web development showcase",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Novailoveyou",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
