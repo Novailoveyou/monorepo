@@ -46,7 +46,7 @@
     transform: translate3d(0, -100%, 0);
 
     .portrait {
-      background: url('../img/portrait_small.jpg');
+      background: url('../img/Nover_small_blackwhite.jpg');
       width: 150px;
       height: 150px;
     }
@@ -67,7 +67,7 @@
     grid-template-columns: 1fr;
   }
 
-  .projects{
+  .projects {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -78,7 +78,7 @@
     margin-top: 10vh;
   }
 
-  .projects{
+  .projects {
     grid-template-columns: 1fr;
   }
 }
