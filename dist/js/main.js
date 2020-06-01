@@ -38,8 +38,8 @@ function insertAfter(newNode, referenceNode) {
 function toggleFooter() {
   if (mainEl.id === 'home' && document.getElementById('main-footer')) {
     document.getElementById('main-footer').remove();
-  } else if (!document.getElementById('main-footer')) {
-    const footerEl = document.createElement('footer');  
+  } else if (mainEl.id !== 'home' && !document.getElementById('main-footer')) {
+    const footerEl = document.createElement('footer');
     footerEl.id = 'main-footer';
     footerEl.classList.add('main-footer');
     footerEl.innerHTML = `
