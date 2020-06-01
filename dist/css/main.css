@@ -145,6 +145,9 @@ header {
 .text-secondary {
   color: #eece1a; }
 
+.txt-type > .txt {
+  border-right: 0.2rem solid #777; }
+
 main {
   padding: 4rem;
   min-height: calc(100vh - 3.75em); }

@@ -52,6 +52,10 @@ header {
   color: $secondary-color;
 }
 
+.txt-type > .txt {
+  border-right: 0.2rem solid #777;
+}
+
 main {
   padding: 4rem;
   // height: 100%;
