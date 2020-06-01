@@ -175,6 +175,9 @@ main {
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
+    width: 250px;
+    height: 250px;
+    background: url("../img/Nover_blackwhite.jpg");
     margin: auto;
     border-radius: 50%;
     border: #eece1a 3px solid; }
@@ -295,6 +298,12 @@ main {
     margin-top: 10vh; }
     main#home h1.lg-heading {
       font-size: 5rem; }
+  main {
+    padding: 2rem; }
+  .about-info .bio-image {
+    width: 150px;
+    height: 150px;
+    background: url("../img/Nover_small_blackwhite.jpg"); }
   .projects {
     grid-template-columns: 1fr; }
   h1,

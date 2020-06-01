@@ -96,6 +96,9 @@ main {
 
   .bio-image {
     grid-area: bioimage;
+    width: 250px;
+    height: 250px;
+    background: url('../img/Nover_blackwhite.jpg');
     margin: auto;
     border-radius: 50%;
     border: $secondary-color 3px solid;

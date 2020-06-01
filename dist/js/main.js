@@ -125,11 +125,7 @@ const aboutState = function (page) {
       Let me tell you a few things...
     </h2>
     <div class="about-info">
-      <img
-        src="img/Nover_blackwhite.jpg"
-        alt="Ilya Orlov"
-        class="bio-image"
-      />
+      <div class="bio-image"></div>
 
       <div class="bio">
         <h3 class="text-secondary">BIO</h3>

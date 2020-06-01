@@ -81,6 +81,18 @@
     }
   }
 
+  main {
+    padding: 2rem;
+  }
+
+  .about-info {
+    .bio-image {
+      width: 150px;
+      height: 150px;
+      background: url('../img/Nover_small_blackwhite.jpg');
+    }
+  }
+
   .projects {
     grid-template-columns: 1fr;
   }
