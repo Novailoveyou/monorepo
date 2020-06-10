@@ -217,6 +217,34 @@ const workState = function (page) {
       Check out some of my projects...
     </h2>
     <div class="projects">
+    <div class="item">
+          <a
+            href="https://novailoveyou.github.io/TRIO/"
+            name="TRIO company page"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="img/projects/project6.jpg" alt="Project" />
+          </a>
+          <a
+            href="https://novailoveyou.github.io/TRIO/"
+            name="TRIO company page"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-light"
+          >
+            <i class="fas fa-eye"></i>Project
+          </a>
+          <a
+            href="https://github.com/Novailoveyou/TRIO"
+            name="GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-dark"
+          >
+            <i class="fab fa-github"></i>Github
+          </a>
+        </div>
       <div class="item">
         <a
           href="https://novailoveyou.github.io/SpeedTyper/"
@@ -356,35 +384,7 @@ const workState = function (page) {
         >
           <i class="fab fa-github"></i>Github
         </a>
-      </div>
-      <div class="item">
-        <a
-          href="https://novailoveyou.github.io/TRIO/"
-          name="TRIO company page"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="img/projects/project6.jpg" alt="Project" />
-        </a>
-        <a
-          href="https://novailoveyou.github.io/TRIO/"
-          name="TRIO company page"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-light"
-        >
-          <i class="fas fa-eye"></i>Project
-        </a>
-        <a
-          href="https://github.com/Novailoveyou/TRIO"
-          name="GitHub"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-dark"
-        >
-          <i class="fab fa-github"></i>Github
-        </a>
-      </div>
+        </div>
     </div>
   `;
 

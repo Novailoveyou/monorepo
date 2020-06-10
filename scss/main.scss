@@ -134,6 +134,11 @@ main {
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr);
 
+  // &:nth-last-child(1) {
+  //   grid-column: 1/1;
+  //   grid-row: 1/1;
+  // }
+
   img {
     width: 100%;
     border: 3px #fff solid;
