@@ -4,9 +4,4 @@ TODO: Improve data structure
 
 TODO: Implement webpack
 
-TODO: Improve responsiveness
-
 TODO: Make it so that when we hover over our menu items they all go white
-
-TODO: Make it so that animations go from horizontal on mobile devices
-and from vertical on desktop
