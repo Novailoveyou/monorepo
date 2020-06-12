@@ -3,12 +3,44 @@
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .menu-btn.highlight-btn {
+    background-color: $secondary-color;
+    padding: 1em 0.8em 0.8em 0.8em;
+    border-radius: 50%;
+    &.close {
+      padding: 0;
+      background-color: transparent;
+      .btn-line {
+        background: set-text-color($primary-color);
+      }
+    }
+    .btn-line {
+      background: rgba($primary-color, $background-opacity);
+    }
+  }
 }
 
 // Desktops & Laptops
 @include mediaLg {
   .projects {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .menu-btn.highlight-btn {
+    background-color: $secondary-color;
+    padding: 1em 0.8em 0.8em 0.8em;
+    border-radius: 50%;
+    &.close {
+      padding: 0;
+      background-color: transparent;
+      .btn-line {
+        background: set-text-color($primary-color);
+      }
+    }
+    .btn-line {
+      background: rgba($primary-color, $background-opacity);
+    }
   }
 }
 

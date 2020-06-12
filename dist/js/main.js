@@ -4,7 +4,11 @@ const menuBtn = document.querySelector('.menu-btn'),
   menuNav = document.querySelector('.menu-nav'),
   menuBranding = document.querySelector('.menu-branding'),
   navItems = document.querySelectorAll('.nav-item'),
-  mainEl = document.querySelector('main');
+  mainEl = document.querySelector('main'),
+  home = document.getElementById('home-page'),
+  about = document.getElementById('about'),
+  work = document.getElementById('work'),
+  contact = document.getElementById('contact');
 
 // Set Initial State Of Menu
 let showMen = false;
@@ -31,6 +35,22 @@ function toggleMenu() {
   }
 }
 
+// Convert Node List to an Array
+function NodeListToArray(nodeList) {
+  return Array.prototype.slice.call(nodeList);
+}
+
+// Set class current to menu item
+function setCurrentToMenuItem(menuItemIndex) {
+  const navItemsArr = NodeListToArray(navItems);
+  navItemsArr.forEach((item) => {
+    item.classList.contains('current')
+      ? item.classList.remove('current')
+      : false;
+  });
+  navItemsArr[menuItemIndex].classList.add('current');
+}
+
 function insertAfter(newNode, referenceNode) {
   referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
@@ -50,8 +70,6 @@ function toggleFooter() {
   }
 }
 
-menuBtn.addEventListener('click', toggleMenu);
-
 ///////////////////////////////////////////////////////////////////////////////
 
 const PageState = function () {
@@ -70,6 +88,8 @@ const PageState = function () {
 const homeState = function (page) {
   mainEl.id = 'home';
   toggleMenu();
+  setCurrentToMenuItem(0);
+  menuBtn.classList.add('highlight-btn');
   mainEl.innerHTML = `
     <h1 class="lg-heading">Ilya <span class="text-secondary">Orlov</span></h1>
     <h2 class="sm-heading">
@@ -119,6 +139,8 @@ const homeState = function (page) {
 const aboutState = function (page) {
   mainEl.id = 'about';
   toggleMenu();
+  setCurrentToMenuItem(1);
+  menuBtn.classList.remove('highlight-btn');
   mainEl.innerHTML = `
     <h1 class="lg-heading">About <span class="text-secondary">Me</span></h1>
     <h2 class="sm-heading">
@@ -211,6 +233,8 @@ const aboutState = function (page) {
 const workState = function (page) {
   mainEl.id = 'work';
   toggleMenu();
+  setCurrentToMenuItem(2);
+  menuBtn.classList.remove('highlight-btn');
   mainEl.innerHTML = `
     <h1 class="lg-heading">My <span class="text-secondary">Work</span></h1>
     <h2 class="sm-heading">
@@ -395,6 +419,8 @@ const workState = function (page) {
 const contactState = function (page) {
   mainEl.id = 'contact';
   toggleMenu();
+  setCurrentToMenuItem(3);
+  menuBtn.classList.remove('highlight-btn');
   mainEl.innerHTML = `
     <h1 class="lg-heading">Contact <span class="text-secondary">Me</span></h1>
     <h2 class="sm-heading">
@@ -434,12 +460,6 @@ const page = new PageState();
 
 // Init the first state
 page.init();
-
-// UI Vars
-const home = document.getElementById('home-page'),
-  about = document.getElementById('about'),
-  work = document.getElementById('work'),
-  contact = document.getElementById('contact');
 
 // Home
 home.addEventListener('click', (e) => {
@@ -524,11 +544,6 @@ class TypeWriter {
   }
 }
 
-// Init On DOM Load
-document.addEventListener('DOMContentLoaded', init);
-
-document.getElementById('home-page').addEventListener('click', init);
-
 // Init App
 function init() {
   const txtElement = document.querySelector('.txt-type');
@@ -537,3 +552,11 @@ function init() {
   // Init TypeWriter
   new TypeWriter(txtElement, words, wait);
 }
+
+// Event listeners
+// Init On DOM Load
+document.addEventListener('DOMContentLoaded', init);
+
+home.addEventListener('click', init);
+
+menuBtn.addEventListener('click', toggleMenu);

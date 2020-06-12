@@ -253,11 +253,33 @@ main {
 
 @media only screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(4, 1fr); }
+  .menu-btn.highlight-btn {
+    background-color: #eece1a;
+    padding: 1em 0.8em 0.8em 0.8em;
+    border-radius: 50%; }
+    .menu-btn.highlight-btn.close {
+      padding: 0;
+      background-color: transparent; }
+      .menu-btn.highlight-btn.close .btn-line {
+        background: #fff; }
+    .menu-btn.highlight-btn .btn-line {
+      background: rgba(68, 68, 68, 0.9); } }
 
 @media only screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .menu-btn.highlight-btn {
+    background-color: #eece1a;
+    padding: 1em 0.8em 0.8em 0.8em;
+    border-radius: 50%; }
+    .menu-btn.highlight-btn.close {
+      padding: 0;
+      background-color: transparent; }
+      .menu-btn.highlight-btn.close .btn-line {
+        background: #fff; }
+    .menu-btn.highlight-btn .btn-line {
+      background: rgba(68, 68, 68, 0.9); } }
 
 @media only screen and (max-width: 768px) {
   main {
