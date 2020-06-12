@@ -130,7 +130,7 @@ const aboutState = function (page) {
       <div class="bio">
         <h3 class="text-secondary">BIO</h3>
         <p>
-          I'm 22 years old front-end web developer from Moscow specializing in
+          I'm 23 years old passioned front-end web developer from Moscow specializing in
           CSS&HTML and JavaScript. I've got a huge passion for programming so
           I taught myself how to code with the enormous help of Brad Traversy.
           My goal is to simply be useful to others and put my skills to work.
@@ -150,8 +150,8 @@ const aboutState = function (page) {
               >bradtraversy/vanillawebprojects repo</span
             ></a
           >
-          with 4.6k stars on GitHub. This repo used in Brad's Udemy course
-          with over 12000 students as of May 7, 2020.
+          with 5.6k stars on GitHub. This repo used in Brad's Udemy course
+          with over 15000 students as of June 12, 2020.
         </p>
       </div>
 
