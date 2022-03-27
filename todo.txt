@@ -1,7 +1,0 @@
-TODO: Clean up main.js mess
-
-TODO: Improve data structure
-
-TODO: Implement webpack
-
-TODO: Make it so that when we hover over our menu items they all go white
