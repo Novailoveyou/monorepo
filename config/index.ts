@@ -1,0 +1,8 @@
+export { default as dev } from '@/config/dev'
+export { default as domainName } from '@/config/domainName'
+export { default as emailAddress } from '@/config/emailAddress'
+export { default as localhostPort } from '@/config/localhostPort'
+export { default as localhost } from '@/config/localhost'
+export { default as phoneNumber } from '@/config/phoneNumber'
+export { default as prod } from '@/config/prod'
+export { default as routesFront } from '@/config/routesFront'
