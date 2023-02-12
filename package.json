@@ -7,21 +7,35 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
+    "build": "turbo run build --color",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
+    "lint": "turbo run lint --parallel",
     "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
-  },
-  "devDependencies": {
-    "eslint-config-custom": "workspace:*",
-    "prettier": "latest",
-    "turbo": "latest"
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "postinstall": "manypkg check",
+    "manypkgcheck": "manypkg check",
+    "manypkgfix": "manypkg fix",
+    "prepare": "pnpm husky install",
+    "commit": "git add . & git commit",
+    "openESLintFiles": "pnpm lint | grep novailoveyou.com | xargs code"
   },
   "engines": {
     "node": ">=14.0.0"
   },
   "dependencies": {
-    "husky": "^8.0.3"
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@commitlint/format": "^17.0.0",
+    "@manypkg/cli": "latest",
+    "eslint-config-custom": "*",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.3",
+    "turbo": "^1.7.0"
+  },
+  "resolutions": {
+    "enhanced-resolve": "5.10.0"
   },
   "packageManager": "pnpm@7.16.1"
 }

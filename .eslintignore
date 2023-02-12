@@ -55,9 +55,6 @@ next-env.d.ts
 .next/
 out/
 
-# storybook
-storybook-static
-
 # strapi
 exports
 *.cache
@@ -65,9 +62,6 @@ exports
 
 # public
 robots.txt
-sitemap.xml
-sitemap-1.xml
-sitemap-0.xml
 
 # os x
 .DS_Store
@@ -97,7 +91,6 @@ $RECYCLE.BIN/
 license.txt
 *.pem
 apps/**/.gitignore
-packages/**/.gitignore
 *#
 ssl
 nbproject

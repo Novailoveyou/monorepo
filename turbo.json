@@ -1,15 +1,64 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [
+    ".env",
+    ".env.local",
+    ".env.development.local",
+    ".env.test.local",
+    ".env.production.local",
+    "tsconfig.json"
+  ],
   "pipeline": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**"]
+      "dependsOn": ["lint", "^build"],
+      "env": [
+        "SMTP_FROM",
+        "SMTP_TO_PROD",
+        "SMTP_TO_DEV",
+        "SMTP_HOST",
+        "SMTP_PORT",
+        "SMTP_LOGIN",
+        "SMTP_PASSWORD",
+        "PREVIEW_SECRET",
+        "GOOGLE_TAG_MANAGER_ID",
+        "NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID"
+      ],
+      "outputs": ["dist/**", ".next/**", "storybook-static/**"]
+    },
+    "test": {
+      "dependsOn": ["lint", "build"],
+      "outputs": [],
+      "inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts", "test/**/*.tsx"]
+    },
+    "test:watch": {
+      "cache": false,
+      "outputs": [],
+      "inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts", "test/**/*.tsx"]
     },
     "lint": {
+      "dependsOn": ["^lint"],
+      "outputs": []
+    },
+    "deploy": {
+      "dependsOn": ["lint", "build", "test"],
       "outputs": []
     },
     "dev": {
       "cache": false
     }
-  }
+  },
+  "globalEnv": [
+    "NODE_ENV",
+    "TZ",
+    "SMTP_FROM",
+    "SMTP_TO_PROD",
+    "SMTP_TO_DEV",
+    "SMTP_HOST",
+    "SMTP_PORT",
+    "SMTP_LOGIN",
+    "SMTP_PASSWORD",
+    "PREVIEW_SECRET",
+    "GOOGLE_TAG_MANAGER_ID",
+    "NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID"
+  ]
 }

@@ -1,0 +1,32 @@
+# https://prettier.io/docs/en/options.html
+# http://json.schemastore.org/prettierrc
+
+printWidth: 80
+tabWidth: 2
+useTabs: false
+semi: false
+singleQuote: true
+quoteProps: 'as-needed'
+jsxSingleQuote: true
+trailingComma: none
+bracketSpacing: true
+bracketSameLine: true
+arrowParens: avoid
+requirePragma: false
+insertPragma: false
+proseWrap: preserve
+htmlWhitespaceSensitivity: strict
+vueIndentScriptAndStyle: true
+endOfLine: lf
+embeddedLanguageFormatting: auto
+singleAttributePerLine: false
+editorconfig: false
+overrides:
+  - files: '*.css'
+    options:
+      parser: css
+  - files:
+    - '*.scss'
+    - '*.sass'
+    options:
+      parser: scss
