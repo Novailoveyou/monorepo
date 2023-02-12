@@ -5,7 +5,7 @@ export default function Web() {
   return (
     <div>
       <h1>Web</h1>
-      <StyledJsxV1Button as='button' type='button'>
+      <StyledJsxV1Button as='a' type='button'>
         123
       </StyledJsxV1Button>
     </div>

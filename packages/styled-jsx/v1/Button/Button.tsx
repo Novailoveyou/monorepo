@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { ComponentProps } from 'react'
 import clsx from 'clsx'
-import { z } from 'zod'
 import stls from './Button.module.sass'
 
 const BUTTON = 'button' as const
@@ -21,7 +20,7 @@ const Button = <T extends ButtonProps<As>>({
 }: ButtonProps<T['as']>) =>
   React.createElement(
     as,
-    { className: clsx(stls.root, className), ...props },
+    { className: clsx(stls[as], className), ...props },
     props.children
   )
 

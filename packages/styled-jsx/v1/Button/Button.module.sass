@@ -1,4 +1,13 @@
-.root
+@mixin shared
+  font-family: inherit
+  font-size: 100%
+  line-height: 1.15
+  color: inherit
+  cursor: pointer
+  -webkit-tap-highlight-color: transparent
+
+.button
+  @include shared
   display: inline-block
   overflow: visible
   max-width: 100%
@@ -14,12 +23,11 @@
   border-width: 0
   border-style: none
   border-color: transparent
-  font-family: inherit
-  font-size: 100%
-  line-height: 1.15
   text-align: center
   text-transform: none
   appearance: none
-  cursor: pointer
-  -webkit-tap-highlight-color: transparent
   background-color: transparent
+
+.a
+  @include shared
+  text-decoration: none
