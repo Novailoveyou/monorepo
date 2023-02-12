@@ -1,29 +1,34 @@
 import * as React from 'react'
+import { ComponentProps } from 'react'
 import clsx from 'clsx'
-import { ButtonProps } from './types'
-import { ROOT, TYPE } from './constants'
+import { z } from 'zod'
 // import stls from './Button.module.sass'
 
-export const Button = <T extends ButtonProps<'button' | 'a'>>({
-  className,
-  as,
-  ...props
-}: ButtonProps<T['as']>) => {
-  const root = as || ROOT
-  // const type = root === ''
+const ROOT = 'button'
+const TYPE = 'button'
 
-  return React.createElement(
-    root,
+type As = typeof ROOT | 'a'
+
+export type ButtonProps<T extends As> = T extends 'a'
+  ? { as: T } & ComponentProps<'a'>
+  : { as: T } & ComponentProps<'button'>
+
+export const Button = <T extends ButtonProps<As>>({
+  className,
+  as = ROOT,
+  ...props
+}: ButtonProps<T['as']>) =>
+  React.createElement(
+    as,
     { className: clsx(className), type: TYPE, ...props },
     props.children
   )
-}
 
 export default Button
 
 export const Test = () => {
   return (
-    <Button as='a' type='button' href='/'>
+    <Button as='a' href='/'>
       Test
     </Button>
   )
