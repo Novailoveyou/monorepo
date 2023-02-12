@@ -1,0 +1,43 @@
+{
+  "name": "styled-jsx",
+  "version": "0.0.0",
+  "main": "./index.tsx",
+  "types": "./index.tsx",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"**/*.ts*\""
+  },
+  "devDependencies": {
+    "@storybook/react": "^6.5.14",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/color": "^3.0.3",
+    "@types/marked": "^4.0.7",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@types/styled-components": "^5.1.26",
+    "axios": "^1.2.1",
+    "clsx": "^1.2.1",
+    "color": "^4.2.3",
+    "cssesc": "^3.0.0",
+    "eslint": "8.32.0",
+    "eslint-config-custom": "*",
+    "html-react-parser": "^3.0.4",
+    "js-base64": "^3.7.3",
+    "marked": "^4.2.3",
+    "next": "13.1.4",
+    "nodemailer": "^6.8.0",
+    "react": "18.2.0",
+    "react-hook-form": "^7.41.0",
+    "reactjs-popup": "^2.0.5",
+    "sass": "^1.58.0",
+    "slugify": "^1.6.5",
+    "styled-components": "^5.3.6",
+    "styled-normalize": "^8.0.7",
+    "ts-toolbelt": "^9.6.0",
+    "tsconfig": "*",
+    "typescript": "^4.9.4"
+  },
+  "resolutions": {
+    "styled-components": "^5"
+  }
+}
