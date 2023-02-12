@@ -4,7 +4,11 @@ import { ButtonProps } from './types'
 import { ROOT, TYPE } from './constants'
 // import stls from './Button.module.sass'
 
-export const Button = ({ className, as, ...props }: ButtonProps<'button'>) => {
+export const Button = <T extends ButtonProps<'button' | 'a'>>({
+  className,
+  as,
+  ...props
+}: ButtonProps<T['as']>) => {
   const root = as || ROOT
   // const type = root === ''
 
@@ -16,3 +20,11 @@ export const Button = ({ className, as, ...props }: ButtonProps<'button'>) => {
 }
 
 export default Button
+
+export const Test = () => {
+  return (
+    <Button as='a' type='button' href='/'>
+      Test
+    </Button>
+  )
+}
