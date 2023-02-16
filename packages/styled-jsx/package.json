@@ -8,8 +8,6 @@
     "lint": "eslint \"**/*.ts*\""
   },
   "devDependencies": {
-    "@storybook/react": "^6.5.14",
-    "@storybook/testing-library": "^0.0.13",
     "@types/color": "^3.0.3",
     "@types/marked": "^4.0.7",
     "@types/react": "18.0.28",

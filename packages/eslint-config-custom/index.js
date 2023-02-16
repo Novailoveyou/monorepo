@@ -10,7 +10,7 @@ module.exports = {
     'airbnb-typescript',
     'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
-    'plugin:storybook/recommended',
+    // 'plugin:storybook/recommended',
     'prettier'
   ],
   plugins: ['turbo', '@typescript-eslint', 'prettier'],
