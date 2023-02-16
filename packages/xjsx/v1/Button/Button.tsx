@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { ComponentProps } from 'react'
 import clsx from 'clsx'
-import stls from './Button.module.scss'
+import stls from './Button.module.sass'
 
 const BUTTON = 'button' as const
 const A = 'a' as const
