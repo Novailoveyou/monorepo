@@ -28,7 +28,7 @@
     "@commitlint/config-conventional": "^17.3.0",
     "@commitlint/format": "^17.0.0",
     "@manypkg/cli": "latest",
-    "eslint-config-custom": "*",
+    "eslint-config-custom": "0.0.0",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.3",

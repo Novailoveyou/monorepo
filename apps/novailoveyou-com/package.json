@@ -1,5 +1,5 @@
 {
-  "name": "novailoveyou.com",
+  "name": "novailoveyou-com",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -25,11 +25,11 @@
     "react-dom": "18.2.0",
     "sharp": "^0.31.3",
     "slugify": "^1.6.5",
-    "styled-jsx": "0.0.0",
     "swr": "^1.3.0",
     "truncate": "^3.0.0",
     "ui": "0.0.0",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "xjsx": "0.0.0"
   },
   "devDependencies": {
     "@types/color": "^3.0.3",

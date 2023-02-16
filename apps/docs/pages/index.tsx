@@ -1,6 +1,6 @@
 import { Button } from 'ui'
 
-export default function Docs() {
+export const Docs = () => {
   return (
     <div>
       <h1>Docs</h1>
@@ -8,3 +8,5 @@ export default function Docs() {
     </div>
   )
 }
+
+export default Docs

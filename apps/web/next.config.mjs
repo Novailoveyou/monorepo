@@ -28,7 +28,7 @@ const nextConfig = {
     // path: 'https://res.cloudinary.com/mitu-institute/',
     domains: ['res.cloudinary.com']
   },
-  transpilePackages: ['styled-jsx', 'ui'],
+  transpilePackages: ['xjsx', 'ui'],
   experimental: {
     // * Required:
     appDir: true
