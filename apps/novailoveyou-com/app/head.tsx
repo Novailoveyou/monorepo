@@ -1,4 +1,4 @@
-export const Head = () => {
+const Head = () => {
   return (
     <>
       <title>Create Next App</title>
