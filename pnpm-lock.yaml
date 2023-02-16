@@ -58,7 +58,7 @@ importers:
       tsconfig: link:../../packages/tsconfig
       typescript: 4.9.5
 
-  apps/novailoveyou.com1:
+  apps/novailoveyou.com:
     specifiers:
       '@next/font': 13.1.6
       '@types/color': ^3.0.3

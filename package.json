@@ -1,5 +1,5 @@
 {
-  "name": "novailoveyou.com",
+  "name": "monorepo",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
@@ -18,7 +18,7 @@
     "manypkgfix": "manypkg fix",
     "prepare": "pnpm husky install",
     "commit": "git add . & git commit",
-    "openESLintFiles": "pnpm lint | grep novailoveyou.com | xargs code"
+    "openESLintFiles": "pnpm lint | grep monorepo | xargs code"
   },
   "engines": {
     "node": ">=14.0.0"
@@ -37,5 +37,5 @@
   "resolutions": {
     "enhanced-resolve": "5.10.0"
   },
-  "packageManager": "pnpm@7.16.1"
+  "packageManager": "pnpm@7.27.1"
 }
