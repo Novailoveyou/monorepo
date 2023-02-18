@@ -1,4 +1,5 @@
 @use 'xtheme/v1/colors.sass' as COLORS;
+@use 'xtheme/v1/typo.sass' as TYPO;
 @import url('https://cdn.jsdelivr.net/npm/normalize.css');
 
 // TODO: add a slight black gradient on the background
@@ -6,7 +7,8 @@
 
 :root {
   --max-width: 1100px;
-  #{COLORS.$primary}: #ffc700;
+  #{TYPO.$rootFontSize}: 1rem;
+  #{COLORS.$primary}: #ffc800;
   #{COLORS.$secondary}: #ff00d6;
   #{COLORS.$dark}: #181818;
   #{COLORS.$light}: #fff;
@@ -16,10 +18,19 @@
   }
 }
 
-* {
+html {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  font-size: var(TYPO.$rootFontSize);
+  font-weight: 400;
+}
+
+// * css hack to render box-sizing faster
+// * the inheritance loads faster than the cascade
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  /* outline: 2px solid red; */
 }
 
 body {
@@ -43,4 +54,15 @@ body {
 
 .lowercase {
   text-transform: lowercase;
+}
+
+// .test {
+//   & h2 {
+//     font-size: clamp(1.5rem, 5vw + 1rem, 8rem);
+//   }
+// }
+
+.h1 {
+  container-type: inline-size;
+  font-size: '10cqi';
 }

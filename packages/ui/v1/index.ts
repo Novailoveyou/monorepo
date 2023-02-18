@@ -1,10 +1,12 @@
 import * as React from 'react'
 import Buttons from './buttons'
+import Texts from './texts'
 
-export { Buttons }
+export { Buttons, Texts }
 
 const V1 = {
-  Buttons
+  Buttons,
+  Texts
 } as const
 
 export default V1
