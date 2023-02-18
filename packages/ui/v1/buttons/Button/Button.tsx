@@ -11,15 +11,11 @@ const NEXT_LINK = 'NextLink'
 
 type ElementType = typeof BUTTON | typeof A | typeof NEXT_LINK
 
-type UI = 'nova'
-
-type Size = 'lg'
-
-type Theme = 'primary'
-
-type AdditionalProps<T> = {
+type AdditionalProps<T extends ElementType> = {
   elementType: T
-  variant: `${UI}-${Size}-${Theme}`
+  variant: 'nova'
+  size: 'lg'
+  theme: 'primary'
 }
 
 type ButtonProps<T extends ElementType> = T extends typeof A
@@ -31,23 +27,20 @@ type ButtonProps<T extends ElementType> = T extends typeof A
 const Button = <T extends ButtonProps<ElementType>>({
   elementType,
   variant,
+  size,
+  theme,
   ...props
 }: ButtonProps<T['elementType']>) => {
-  const ui = variant.split('-')[0] as string // TODO: improve types to use Infer
-  const size = variant.split('-')[1] as string // TODO: improve types to use Infer
-  const theme = variant.split('-')[2] as string // TODO: improve types to use Infer
-
   const className = clsx(
-    classNames[ui],
-    classNames[`${ui}--size-${size}`],
-    classNames[`${ui}--theme-${theme}`]
+    classNames[variant],
+    classNames[`${variant}--size-${size}`],
+    classNames[`${variant}--theme-${theme}`],
+    props.className
   )
 
   if (elementType === A)
-    return (
-      // @ts-expect-error - TS doesn't understand that props are valid
-      <XJsxA {...props} className={className} />
-    )
+    // @ts-expect-error - TS doesn't understand that props are valid
+    return <XJsxA {...props} className={className} />
 
   if (elementType === NEXT_LINK)
     // @ts-expect-error - TS doesn't understand that props are valid
@@ -63,7 +56,12 @@ export default Button
 
 const Test = () => {
   return (
-    <Button elementType='NextLink' href='/' variant='nova-lg-primary'>
+    <Button
+      elementType='NextLink'
+      href='/'
+      variant='nova'
+      size='lg'
+      theme='primary'>
       Test
     </Button>
   )

@@ -1,0 +1,6 @@
+@use "sass:math"
+
+@function pxToRem($px, $rootFontSize: 16)
+  $val: math.div($px, $rootFontSize)
+  @return #{$val}rem
+

@@ -1,4 +1,5 @@
 @use 'xtheme/v1/colors.sass' as COLORS
+@use 'xtheme/v1/funcs.sass' as FUNCS
 
 @mixin novaHighlightEffect
   transform: scale(1.02)
@@ -25,7 +26,7 @@
   border-width: 0
   border-style: none
   border-color: transparent
-  border-radius: 50px
+  border-radius: 3.125em
   font-family: inherit
   font-weight: 700
   line-height: 100%
@@ -33,7 +34,7 @@
   text-align: center
   transition: transform 150ms ease-in-out
   &--size-lg
-    font-size: 20px
+    font-size: FUNCS.pxToRem(20)
   &--theme-primary
     background: linear-gradient(180deg, var(COLORS.$primary) -15.62%, var(COLORS.$secondary) 100%)
     color: white
@@ -46,11 +47,11 @@
     min-height: 100%
     border-radius: inherit
     opacity: .1
-    filter: blur(10px)
+    filter: blur(FUNCS.pxToRem(10))
     background-color: white
     transform: translateY(100%)
     transition: transform 150ms ease-in
-    animation: glow 3s ease-in-out infinite
+    animation: glow 3000ms ease-in-out infinite
   &:focus-visible
     outline-color: var(COLORS.$light)
     @include novaHighlightEffect

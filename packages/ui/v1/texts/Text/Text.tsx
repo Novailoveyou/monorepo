@@ -1,70 +1,135 @@
 import { ComponentProps } from 'react'
 import clsx from 'clsx'
-import XJsxButton from 'xjsx/v1/Button'
-import XJsxA from 'xjsx/v1/A'
-import NextLink from 'next-wrappers/v1/NextLink'
-import classNames from './Button.module.sass'
+import XJsxH1 from 'xjsx/v1/H1'
+import XJsxH2 from 'xjsx/v1/H2'
+import XJsxH3 from 'xjsx/v1/H3'
+import XJsxH4 from 'xjsx/v1/H4'
+import XJsxH5 from 'xjsx/v1/H5'
+import XJsxH6 from 'xjsx/v1/H6'
+import XJsxP from 'xjsx/v1/P'
+import XJsxDiv from 'xjsx/v1/Div'
+import XJsxSpan from 'xjsx/v1/Span'
+import classNames from './Text.module.sass'
 
-const BUTTON = 'button'
-const A = 'a'
-const NEXT_LINK = 'NextLink'
+const H1 = 'h1'
+const H2 = 'h2'
+const H3 = 'h3'
+const H4 = 'h4'
+const H5 = 'h5'
+const H6 = 'h6'
+const P = 'p'
+const DIV = 'div'
+const SPAN = 'span'
 
-type ElementType = typeof BUTTON | typeof A | typeof NEXT_LINK
+type ElementType =
+  | typeof H1
+  | typeof H2
+  | typeof H3
+  | typeof H4
+  | typeof H5
+  | typeof H6
+  | typeof P
+  | typeof DIV
+  | typeof SPAN
 
-type UI = 'nova'
+type Variant = 'nova' | 'test'
 
-type Size = 'lg'
-
-type Theme = 'primary'
-
-type AdditionalProps<T> = {
+type AdditionalProps<T, V> = {
   elementType: T
-  variant: `${UI}-${Size}-${Theme}`
+  variant?: V
+  size?: V extends 'nova' ? '82' | '47' | '51' | '22' | '20' | '18' : never
+  fontWeight?: 300 | 400 | 500 | 700
+  lineHeight?: '100' | '120'
+  theme?: 'light'
+  textTransform?: 'uppercase' | 'lowercase' | 'capitalize'
 }
 
-type ButtonProps<T extends ElementType> = T extends typeof A
-  ? AdditionalProps<T> & ComponentProps<typeof XJsxA>
-  : T extends typeof NEXT_LINK
-  ? AdditionalProps<T> & ComponentProps<typeof NextLink>
-  : AdditionalProps<T> & ComponentProps<typeof XJsxButton>
+type TextProps<T extends ElementType, V extends Variant> = T extends typeof H1
+  ? AdditionalProps<T, V> & ComponentProps<typeof XJsxH1>
+  : T extends typeof H2
+  ? AdditionalProps<T, V> & ComponentProps<typeof XJsxH2>
+  : T extends typeof H3
+  ? AdditionalProps<T, V> & ComponentProps<typeof XJsxH3>
+  : T extends typeof H4
+  ? AdditionalProps<T, V> & ComponentProps<typeof XJsxH4>
+  : T extends typeof H5
+  ? AdditionalProps<T, V> & ComponentProps<typeof XJsxH5>
+  : T extends typeof H6
+  ? AdditionalProps<T, V> & ComponentProps<typeof XJsxH6>
+  : T extends typeof P
+  ? AdditionalProps<T, V> & ComponentProps<typeof XJsxP>
+  : T extends typeof DIV
+  ? AdditionalProps<T, V> & ComponentProps<typeof XJsxDiv>
+  : AdditionalProps<T, V> & ComponentProps<typeof XJsxSpan>
 
-const Button = <T extends ButtonProps<ElementType>>({
+const Text = <T extends TextProps<ElementType, Variant>, V extends Variant>({
   elementType,
   variant,
+  size,
+  fontWeight,
+  lineHeight,
+  theme,
+  textTransform,
+  className: classNameProp,
   ...props
-}: ButtonProps<T['elementType']>) => {
-  const ui = variant.split('-')[0] as string // TODO: improve types to use Infer
-  const size = variant.split('-')[1] as string // TODO: improve types to use Infer
-  const theme = variant.split('-')[2] as string // TODO: improve types to use Infer
-
+}: TextProps<T['elementType'], V>) => {
   const className = clsx(
-    classNames[ui],
-    classNames[`${ui}--size-${size}`],
-    classNames[`${ui}--theme-${theme}`]
+    variant && classNames.variant,
+    size && classNames[`size-${size}`],
+    fontWeight && classNames[`fontWeight-${fontWeight}`],
+    lineHeight && classNames[`lineHeight-${lineHeight}`],
+    theme && classNames[`theme-${theme}`],
+    textTransform && classNames[`textTransform-${textTransform}`],
+    classNameProp
   )
 
-  if (elementType === A)
-    return (
-      // @ts-expect-error - TS doesn't understand that props are valid
-      <XJsxA {...props} className={className} />
-    )
-
-  if (elementType === NEXT_LINK)
+  if (elementType === H1)
     // @ts-expect-error - TS doesn't understand that props are valid
-    return <NextLink {...props} className={className} />
+    return <XJsxH1 {...props} className={className} />
 
-  return (
+  if (elementType === H2)
     // @ts-expect-error - TS doesn't understand that props are valid
-    <XJsxButton {...props} className={className} />
-  )
+    return <XJsxH2 {...props} className={className} />
+
+  if (elementType === H3)
+    // @ts-expect-error - TS doesn't understand that props are valid
+    return <XJsxH3 {...props} className={className} />
+
+  if (elementType === H4)
+    // @ts-expect-error - TS doesn't understand that props are valid
+    return <XJsxH4 {...props} className={className} />
+
+  if (elementType === H5)
+    // @ts-expect-error - TS doesn't understand that props are valid
+    return <XJsxH5 {...props} className={className} />
+
+  if (elementType === H6)
+    // @ts-expect-error - TS doesn't understand that props are valid
+    return <XJsxH6 {...props} className={className} />
+
+  if (elementType === P)
+    // @ts-expect-error - TS doesn't understand that props are valid
+    return <XJsxP {...props} className={className} />
+
+  if (elementType === DIV)
+    // @ts-expect-error - TS doesn't understand that props are valid
+    return <XJsxDiv {...props} className={className} />
+
+  return <XJsxSpan {...props} className={className} />
 }
 
-export default Button
+export default Text
 
 const Test = () => {
   return (
-    <Button elementType='NextLink' href='/' variant='nova-lg-primary'>
+    <Text
+      elementType='h1'
+      variant='nova'
+      size='20'
+      fontWeight={500}
+      lineHeight='100'
+      theme='light'>
       Test
-    </Button>
+    </Text>
   )
 }

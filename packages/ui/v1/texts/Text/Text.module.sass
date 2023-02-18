@@ -1,63 +1,52 @@
 @use 'xtheme/v1/colors.sass' as COLORS
-
-@mixin novaHighlightEffect
-  transform: scale(1.02)
-  &::after
-    transform: translateY(0)
-    animation: none
-
-@keyframes glow
-  0%
-    transform: translateY(100%)
-  50%
-    transform: translateY(0)
-  100%
-    transform: translateY(100%)
+@use 'xtheme/v1/funcs.sass' as FUNCS
 
 .nova
-  position: relative
-  display: inline-block
-  overflow: hidden
-  padding-top: 1.1em
-  padding-bottom: 1.1em
-  padding-right: 2.2em
-  padding-left: 2.2em
-  border-width: 0
-  border-style: none
-  border-color: transparent
-  border-radius: 50px
-  font-family: inherit
+
+.size-18
+  font-size: FUNCS.pxToRem(18)
+
+.size-20
+  font-size: FUNCS.pxToRem(20)
+
+.size-22
+  font-size: FUNCS.pxToRem(22)
+
+.size-51
+  font-size: FUNCS.pxToRem(51)
+
+.size-47
+  font-size: FUNCS.pxToRem(47)
+
+.size-82
+  font-size: FUNCS.pxToRem(82)
+
+.fontWeight-300
+  font-weight: 300
+
+.fontWeight-400
+  font-weight: 400
+
+.fontWeight-500
+  font-weight: 500
+
+.fontWeight-700
   font-weight: 700
+
+.lineHeight-100
   line-height: 100%
+
+.lineHeight-120
+  line-height: 120%
+
+.theme-light
+  color: var(COLORS.$light)
+
+.textTransform-uppercase
   text-transform: uppercase
-  text-align: center
-  transition: transform 150ms ease-in-out
-  &--size-lg
-    font-size: 20px
-  &--theme-primary
-    background: linear-gradient(180deg, var(COLORS.$primary) -15.62%, var(COLORS.$secondary) 100%)
-    color: white
-  &::after
-    content: ''
-    position: absolute
-    top: 0
-    right: 0
-    min-width: 100%
-    min-height: 100%
-    border-radius: inherit
-    opacity: .1
-    filter: blur(10px)
-    background-color: white
-    transform: translateY(100%)
-    transition: transform 150ms ease-in
-    animation: glow 3s ease-in-out infinite
-  &:focus-visible
-    outline-color: var(COLORS.$light)
-    @include novaHighlightEffect
-  @media (hover: hover)
-    &:hover
-      @include novaHighlightEffect
-  &:active
-    transform: scale(.98)
-    &::after
-      transform: translateY(100%)
+
+.textTransform-lowercase
+  text-transform: lowercase
+
+.textTransform-capitalize
+  text-transform: capitalize

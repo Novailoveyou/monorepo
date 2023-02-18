@@ -1,13 +1,18 @@
 @use 'xtheme/v1/colors.sass' as COLORS;
 @use 'xtheme/v1/typo.sass' as TYPO;
+@use 'xtheme/v1/brakepoints.sass' as BRAKEPOINTS;
+@use 'xtheme/v1/media.sass' as MEDIA;
+@use 'xtheme/v1/funcs.sass' as FUNCS;
 @import url('https://cdn.jsdelivr.net/npm/normalize.css');
 
 // TODO: add a slight black gradient on the background
 // TODO: add iteration to the colors
 
 :root {
-  --max-width: 1100px;
-  #{TYPO.$rootFontSize}: 1rem;
+  #{BRAKEPOINTS.$md}: FUNCS.pxToRem(480);
+  #{BRAKEPOINTS.$xl}: FUNCS.pxToRem(768);
+  #{BRAKEPOINTS.$x3}: FUNCS.pxToRem(1280);
+  #{TYPO.$rootFontSize}: FUNCS.pxToRem(16);
   #{COLORS.$primary}: #ffc800;
   #{COLORS.$secondary}: #ff00d6;
   #{COLORS.$dark}: #181818;
@@ -42,18 +47,6 @@ body {
   html {
     color-scheme: light;
   }
-}
-
-.capitalize {
-  text-transform: capitalize;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.lowercase {
-  text-transform: lowercase;
 }
 
 // .test {

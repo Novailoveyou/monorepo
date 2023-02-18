@@ -1,6 +1,6 @@
 import { DefaultSeoProps } from 'next-seo'
 // import truncate from 'truncate'
-// import { routesFront, company, mituinstitute } from '@/config/index'
+// import { routesFront, company } from '@/config/index'
 
 const seoParams = {
   title:
