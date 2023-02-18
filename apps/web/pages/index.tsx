@@ -26,9 +26,7 @@ export const Web = () => {
   return (
     <div>
       <h1>Web</h1>
-      <StyledJsxV1Button as='a' type='button'>
-        123
-      </StyledJsxV1Button>
+      <StyledJsxV1Button type='button'>123</StyledJsxV1Button>
       <table>
         <tbody>
           {Array.from({ length }).map((_, trI) => (
