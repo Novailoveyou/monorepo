@@ -1,14 +1,25 @@
-import './globals.css'
+import { Poppins } from '@next/font/google'
+import clsx from 'clsx'
+import './globals.scss'
+import { DEFAULT_LOCALE } from '../next.config.mjs'
+
+const poppins = Poppins({
+  weight: ['300', '400', '500', '700'],
+  style: 'normal',
+  subsets: ['latin'],
+  variable: '--font-poppins',
+  fallback: ['system-ui', 'arial', 'helvetica', 'sans-serif']
+})
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang='en'>
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html lang={DEFAULT_LOCALE} className={clsx(poppins.className)}>
       <head />
-      <body>{children}</body>
+      <body>
+        <header>Ilia Orlov</header>
+        {children}
+        <footer />
+      </body>
     </html>
   )
 }

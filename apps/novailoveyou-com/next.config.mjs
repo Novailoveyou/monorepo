@@ -8,7 +8,7 @@ import { createSecureHeaders } from 'next-secure-headers'
 export const PROD = process.env.NODE_ENV === 'production'
 export const DEV = process.env.NODE_ENV === 'development'
 export const LOCALES = ['en', 'gb', 'ru', 'de', 'tr', 'nl']
-export const DEFAULT_LOCALE = 'ru'
+export const DEFAULT_LOCALE = 'en'
 
 const nextConfig = {
   reactStrictMode: true, // * Recommended for the `pages` directory, default in `app`.
@@ -28,7 +28,7 @@ const nextConfig = {
     // path: 'https://res.cloudinary.com/mitu-institute/',
     domains: ['res.cloudinary.com']
   },
-  transpilePackages: ['xjsx', 'ui'],
+  transpilePackages: ['xjsx', 'next-wrappers', 'xtheme', 'ui'],
   experimental: {
     // * Required:
     appDir: true

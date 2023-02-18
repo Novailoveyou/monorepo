@@ -24,15 +24,15 @@
     "node": ">=14.0.0"
   },
   "dependencies": {
-    "@commitlint/cli": "^17.3.0",
-    "@commitlint/config-conventional": "^17.3.0",
-    "@commitlint/format": "^17.0.0",
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@commitlint/format": "^17.4.4",
     "@manypkg/cli": "latest",
     "eslint-config-custom": "0.0.0",
-    "husky": "^8.0.2",
-    "lint-staged": "^13.1.0",
-    "prettier": "^2.8.3",
-    "turbo": "^1.7.0"
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "prettier": "^2.8.4",
+    "turbo": "^1.8.1"
   },
   "resolutions": {
     "enhanced-resolve": "5.10.0"

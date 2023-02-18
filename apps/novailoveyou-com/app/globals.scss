@@ -1,0 +1,46 @@
+@use 'xtheme/v1/colors.sass' as COLORS;
+@import url('https://cdn.jsdelivr.net/npm/normalize.css');
+
+// TODO: add a slight black gradient on the background
+// TODO: add iteration to the colors
+
+:root {
+  --max-width: 1100px;
+  #{COLORS.$primary}: #ffc700;
+  #{COLORS.$secondary}: #ff00d6;
+  #{COLORS.$dark}: #181818;
+  #{COLORS.$light}: #fff;
+  @media (prefers-color-scheme: light) {
+    #{COLORS.$dark}: #fff;
+    #{COLORS.$light}: #181818;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(COLORS.$dark);
+  color: var(COLORS.$light);
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}

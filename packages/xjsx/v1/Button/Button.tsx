@@ -1,35 +1,27 @@
 import * as React from 'react'
 import { ComponentProps } from 'react'
 import clsx from 'clsx'
-import stls from './Button.module.sass'
+import classNames from './Button.module.sass'
 
-const BUTTON = 'button' as const
-const A = 'a' as const
+const BUTTON = 'button'
 
-type As = typeof BUTTON | typeof A
+type ButtonProps = ComponentProps<typeof BUTTON> &
+  Required<Pick<ComponentProps<typeof BUTTON>, 'children'>> &
+  Required<Pick<ComponentProps<typeof BUTTON>, 'type'>>
 
-type ButtonProps<T extends As> = T extends typeof A
-  ? { as: T } & ComponentProps<typeof A>
-  : { as: T } & ComponentProps<typeof BUTTON> &
-      Required<Pick<ComponentProps<typeof BUTTON>, 'type'>>
-
-const Button = <T extends ButtonProps<As>>({
-  className,
-  as = BUTTON,
-  ...props
-}: ButtonProps<T['as']>) =>
+const Button = React.forwardRef<
+  JSX.IntrinsicElements[typeof BUTTON],
+  ButtonProps
+>(({ children, className, ...props }, ref) =>
   React.createElement(
-    as,
-    { className: clsx(stls[as], className), ...props },
-    props.children
+    BUTTON,
+    { className: clsx(classNames.button, className), ref, ...props },
+    children
   )
+)
 
 export default Button
 
 const Test = () => {
-  return (
-    <Button as='button' type='button'>
-      Test
-    </Button>
-  )
+  return <Button type='button'>Test</Button>
 }

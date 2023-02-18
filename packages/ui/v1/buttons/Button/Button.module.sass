@@ -1,0 +1,65 @@
+@use 'xtheme/v1/colors.sass' as COLORS
+
+@mixin novaHighlightEffect
+  transform: scale(1.02)
+  &::after
+    transform: translateY(0)
+    animation: none
+
+@keyframes glow
+  0%
+    transform: translateY(100%)
+  50%
+    transform: translateY(0)
+  100%
+    transform: translateY(100%)
+
+.nova
+  position: relative
+  display: inline-block
+  overflow: hidden
+  max-width: 100%
+  height: auto
+  border-width: 0
+  border-style: none
+  border-color: transparent
+  border-radius: 50px
+  font-family: inherit
+  font-weight: 700
+  line-height: 100%
+  text-transform: uppercase
+  text-align: center
+  transition: transform 150ms ease-in-out
+  &--size-lg
+    padding-top: 22px
+    padding-right: 10%
+    padding-bottom: 22px
+    padding-left: 10%
+    font-size: 20px
+  &--theme-primary
+    background: linear-gradient(180deg, var(COLORS.$primary) -15.62%, var(COLORS.$secondary) 100%)
+    color: white
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    min-width: 100%
+    min-height: 100%
+    border-radius: inherit
+    opacity: .1
+    filter: blur(10px)
+    background-color: white
+    transform: translateY(100%)
+    transition: transform 150ms ease-in
+    animation: glow 3s ease-in-out infinite
+  &:focus-visible
+    outline-color: var(COLORS.$light)
+    @include novaHighlightEffect
+  @media (hover: hover)
+    &:hover
+      @include novaHighlightEffect
+  &:active
+    transform: scale(.98)
+    &::after
+      transform: translateY(100%)

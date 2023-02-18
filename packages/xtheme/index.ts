@@ -3,8 +3,8 @@ import V1 from './v1'
 
 export { V1 }
 
-const StyledJSX = {
+const XTHEME = {
   V1
 } as const
 
-export default StyledJSX
+export default XTHEME
