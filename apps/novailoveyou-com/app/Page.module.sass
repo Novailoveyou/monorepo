@@ -1,3 +1,28 @@
+@use 'xtheme/v1/funcs.sass' as FUNCS
+@use 'xtheme/v1/colors.sass' as COLORS
+
 .p
   text-align: justify
   letter-spacing: 0.005em
+
+.container
+  max-width: FUNCS.pxToRem(1020 + 16 + 16)
+  margin-left: auto
+  margin-right: auto
+  padding-left: FUNCS.pxToRem(16)
+  padding-right: FUNCS.pxToRem(16)
+
+.plate
+  padding-top: FUNCS.pxToRem(32)
+  padding-right: FUNCS.pxToRem(64)
+  padding-bottom: FUNCS.pxToRem(32)
+  padding-left: FUNCS.pxToRem(64)
+  border-radius: FUNCS.pxToRem(65)
+  box-shadow: 0 FUNCS.pxToRem(4) FUNCS.pxToRem(35) rgba(black, 0.25)
+  background-color: var(COLORS.$dark500)
+
+.left
+  max-width: FUNCS.pxToRem(284)
+
+.button
+  width: 100%

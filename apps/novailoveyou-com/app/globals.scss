@@ -15,10 +15,18 @@
   #{TYPO.$rootFontSize}: FUNCS.pxToRem(16);
   #{COLORS.$primary}: #ffc800;
   #{COLORS.$secondary}: #ff00d6;
-  #{COLORS.$dark}: #181818;
+  #{COLORS.$dark100}: #282828;
+  #{COLORS.$dark200}: #262626;
+  #{COLORS.$dark300}: #242424;
+  #{COLORS.$dark400}: #222;
+  #{COLORS.$dark500}: #202020;
+  #{COLORS.$dark600}: #181818;
+  #{COLORS.$dark700}: #161616;
+  #{COLORS.$dark800}: #141414;
+  #{COLORS.$dark900}: #121212;
   #{COLORS.$light}: #fff;
   @media (prefers-color-scheme: light) {
-    #{COLORS.$dark}: #fff;
+    #{COLORS.$dark600}: #fff;
     #{COLORS.$light}: #181818;
   }
 }
@@ -39,7 +47,7 @@ html {
 }
 
 body {
-  background-color: var(COLORS.$dark);
+  background-color: var(COLORS.$dark600);
   color: var(COLORS.$light);
 }
 
