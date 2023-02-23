@@ -102,6 +102,7 @@ importers:
 
   apps/novailoveyou-com:
     specifiers:
+      '@microsoft/tsdoc': ^0.14.2
       '@next/font': 13.1.6
       '@types/color': ^3.0.3
       '@types/node': 18.13.0
@@ -165,6 +166,7 @@ importers:
       xjsx: link:../../packages/xjsx
       xtheme: link:../../packages/xtheme
     devDependencies:
+      '@microsoft/tsdoc': 0.14.2
       '@types/color': 3.0.3
       '@types/node': 18.13.0
       '@types/nodemailer': 6.4.7
@@ -283,6 +285,7 @@ importers:
 
   packages/next-wrappers:
     specifiers:
+      '@microsoft/tsdoc': ^0.14.2
       '@types/color': ^3.0.3
       '@types/marked': ^4.0.7
       '@types/react': 18.0.28
@@ -312,6 +315,7 @@ importers:
       xjsx: 0.0.0
       zod: ^3.20.6
     devDependencies:
+      '@microsoft/tsdoc': 0.14.2
       '@types/color': 3.0.3
       '@types/marked': 4.0.8
       '@types/react': 18.0.28
@@ -346,6 +350,7 @@ importers:
 
   packages/ui:
     specifiers:
+      '@microsoft/tsdoc': ^0.14.2
       '@types/color': ^3.0.3
       '@types/marked': ^4.0.7
       '@types/react': 18.0.28
@@ -377,6 +382,7 @@ importers:
       xtheme: 0.0.0
       zod: ^3.20.6
     devDependencies:
+      '@microsoft/tsdoc': 0.14.2
       '@types/color': 3.0.3
       '@types/marked': 4.0.8
       '@types/react': 18.0.28
@@ -410,6 +416,7 @@ importers:
 
   packages/xjsx:
     specifiers:
+      '@microsoft/tsdoc': ^0.14.2
       '@types/color': ^3.0.3
       '@types/marked': ^4.0.7
       '@types/react': 18.0.28
@@ -438,6 +445,7 @@ importers:
       typescript: 4.9.5
       zod: ^3.20.6
     devDependencies:
+      '@microsoft/tsdoc': 0.14.2
       '@types/color': 3.0.3
       '@types/marked': 4.0.8
       '@types/react': 18.0.28
@@ -468,6 +476,7 @@ importers:
 
   packages/xtheme:
     specifiers:
+      '@microsoft/tsdoc': ^0.14.2
       '@types/color': ^3.0.3
       '@types/marked': ^4.0.7
       '@types/react': 18.0.28
@@ -496,6 +505,7 @@ importers:
       typescript: 4.9.5
       zod: ^3.20.6
     devDependencies:
+      '@microsoft/tsdoc': 0.14.2
       '@types/color': 3.0.3
       '@types/marked': 4.0.8
       '@types/react': 18.0.28
@@ -2013,6 +2023,10 @@ packages:
       jju: 1.4.0
       read-yaml-file: 1.1.0
     dev: false
+
+  /@microsoft/tsdoc/0.14.2:
+    resolution: {integrity: sha512-9b8mPpKrfeGRuhFH5iO1iwCLeIIsV6+H1sRfxbkoGXIyQE2BTsPd9zqSqQJ+pv5sJ/hT5M1zvOFL02MnEezFug==}
+    dev: true
 
   /@next/env/13.1.6:
     resolution: {integrity: sha512-s+W9Fdqh5MFk6ECrbnVmmAOwxKQuhGMT7xXHrkYIBMBcTiOqNWhv5KbJIboKR5STXxNXl32hllnvKaffzFaWQg==}
@@ -5558,7 +5572,7 @@ packages:
       babel-loader: 8.3.0_la66t7xldg4uecmyawueag5wkm
       clean-webpack-plugin: 4.0.0_webpack@5.75.0
       globby: 11.1.0
-      next: 13.1.6_pjwopsidmaokadturxaafygjp4
+      next: 13.1.6_fcop3xylqakmbilfhdeuva2xj4
       terser-webpack-plugin: 5.3.6_webpack@5.75.0
       workbox-webpack-plugin: 6.5.4_webpack@5.75.0
       workbox-window: 6.5.4
@@ -5584,7 +5598,7 @@ packages:
       react: '>=16.0.0'
       react-dom: '>=16.0.0'
     dependencies:
-      next: 13.1.6_pjwopsidmaokadturxaafygjp4
+      next: 13.1.6_fcop3xylqakmbilfhdeuva2xj4
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
@@ -5600,7 +5614,7 @@ packages:
       '@corex/deepmerge': 4.0.37
       '@next/env': 13.1.6
       minimist: 1.2.7
-      next: 13.1.6_pjwopsidmaokadturxaafygjp4
+      next: 13.1.6_fcop3xylqakmbilfhdeuva2xj4
     dev: true
 
   /next/13.1.6_5mhhrw5dq6gnbuirj2awdzvyuu:
@@ -5691,7 +5705,6 @@ packages:
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
-    dev: false
 
   /next/13.1.6_pjwopsidmaokadturxaafygjp4:
     resolution: {integrity: sha512-hHlbhKPj9pW+Cymvfzc15lvhaOZ54l+8sXDXJWm3OBNBzgrVj6hwGPmqqsXg40xO1Leq+kXpllzRPuncpC0Phw==}
@@ -5735,6 +5748,7 @@ packages:
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
+    dev: false
 
   /node-abi/3.33.0:
     resolution: {integrity: sha512-7GGVawqyHF4pfd0YFybhv/eM9JwTtPqx0mAanQ146O3FlSh3pA24zf9IRQTOsfTSqXTNzPSP5iagAJ94jjuVog==}

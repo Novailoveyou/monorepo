@@ -36,6 +36,7 @@
     "xtheme": "0.0.0"
   },
   "devDependencies": {
+    "@microsoft/tsdoc": "^0.14.2",
     "@types/color": "^3.0.3",
     "@types/node": "18.13.0",
     "@types/nodemailer": "^6.4.7",
